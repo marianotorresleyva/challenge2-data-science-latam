@@ -46,7 +46,8 @@ Las siguientes hipotesis nos ayudarán a guiarnos con respecto al analisis Princ
 ### Gráficos utilizados
 Para la visualización de datos, se ha seleccionado un conjunto de graficas selectas.
 1. Gráfico Circular
-2. Gráfico
+2. Gráfico Heatmap
+3. Gráfico de Barras
 
 ## Tecnologías Utilizadas 
 Bibliotecas de python
@@ -55,3 +56,14 @@ Bibliotecas de python
 - Matplotlib
 
 # Conclusión
+Utilizando un algoritmo de **Random Forest** para determinar la importancia de variables y matrices de correlación, llegamos a las siguientes conclusiones definitivas:
+
+* **El Bolsillo es el detonante principal:** Las variables financieras (`TotalCharges` y `MonthlyCharges`) ocupan el Top 1 y Top 2 en importancia predictiva. Los clientes se van porque sienten que el costo supera al valor recibido, especialmente cuando su factura supera los **$70 USD**.
+* **La "Trampa Operativa" del Cheque Electrónico:** Un cliente que paga con *Electronic Check* tiene una probabilidad de fuga casi triple que uno con tarjeta de crédito.
+* **La Matriz de la Muerte (Hallazgo Clave):** Al cruzar Contrato vs. Pago, encontramos el segmento más tóxico del negocio:
+
+**Tabla 5: Matriz de Calor de Probabilidad de Fuga**
+| Contrato / Pago | Transferencia Auto | Tarjeta Crédito Auto | Electronic Check |
+| :--- | :---: | :---: | :---: |
+| **Mes a Mes** | 33.1% | 32.0% | **51.9% (PELIGRO)** |
+| **Un Año** | 9.5% | 9.9% | 17.8% |  
