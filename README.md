@@ -65,5 +65,5 @@ Utilizando un algoritmo de **Random Forest** para determinar la importancia de v
 **Tabla 5: Matriz de Calor de Probabilidad de Fuga**
 | Contrato / Pago | Transferencia Auto | Tarjeta Crédito Auto | Electronic Check |
 | :--- | :---: | :---: | :---: |
-| **Mes a Mes** | 33.1% | 32.0% | **51.9% (PELIGRO)** |
+| **Mes a Mes** | 33.1% | 32.0% | **51.9%** |
 | **Un Año** | 9.5% | 9.9% | 17.8% |  
